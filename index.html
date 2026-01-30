@@ -1,335 +1,261 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Author" content="Luana L.C. Costa">
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
-    span.s1 {font: 12.0px 'Apple Color Emoji'}
-    span.s2 {font: 12.0px 'Zapf Dingbats'}
-    span.s3 {font: 12.0px 'Times New Roman'}
-  </style>
-</head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agente Fred - Fluxograma | Dunice & Marcon</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="pt-BR"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Agente Fred - Fluxograma | Dunice &amp; Marcon&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react@18/umd/react.production.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="root"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script type="text/babel"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const { useState } = React;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>const FlowChart = () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const [activeSection, setActiveSection] = useState('all');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const sections = [</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{ id: 'all', label: 'Visão Completa' },</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{ id: 'auth', label: 'Autenticação' },</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{ id: 'offers', label: 'Hierarquia de Ofertas' },</p>
-<p class="p1"><span class="Apple-converted-space">                </span>{ id: 'objections', label: 'Objeções' }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div className="min-h-screen bg-slate-900 p-4 text-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div className="text-center mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span><span class="s1">🤖</span> Agente Fred - Fluxo de Atendimento</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p className="text-slate-400 text-sm mt-1"&gt;Dunice &amp; Marcon • Banco Safra • Cobrança 90+&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div className="flex justify-center gap-2 mb-6 flex-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>{sections.map(s =&gt; (</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>key={s.id}</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>onClick={() =&gt; setActiveSection(s.id)}</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>activeSection === s.id</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>? 'bg-blue-500 text-white shadow-lg'</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>: 'bg-slate-700 text-slate-300 hover:bg-slate-600'</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>}`}</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>{s.label}</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>))}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div className="flex justify-center gap-4 mb-6 text-xs flex-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span className="flex items-center gap-1"&gt;&lt;span className="w-3 h-3 rounded bg-blue-500"&gt;&lt;/span&gt; Fluxo Normal&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span className="flex items-center gap-1"&gt;&lt;span className="w-3 h-3 rounded bg-emerald-500"&gt;&lt;/span&gt; Sucesso&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span className="flex items-center gap-1"&gt;&lt;span className="w-3 h-3 rounded bg-amber-500"&gt;&lt;/span&gt; Decisão&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span className="flex items-center gap-1"&gt;&lt;span className="w-3 h-3 rounded bg-rose-500"&gt;&lt;/span&gt; Transbordo&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span className="flex items-center gap-1"&gt;&lt;span className="w-3 h-3 rounded bg-purple-500"&gt;&lt;/span&gt; Webhook&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div className="max-w-6xl mx-auto"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>{(activeSection === 'all' || activeSection === 'auth') &amp;&amp; (</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h2 className="text-lg font-semibold text-blue-400 mb-4 flex items-center gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center"&gt;1&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>Fase de Autenticação</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="bg-slate-800 rounded-xl p-6 border border-slate-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="flex flex-col items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-48 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-center font-semibold shadow-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span><span class="s1">📱</span> Cliente Inicia Chat</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-0.5 h-6 bg-blue-400"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-72 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="font-semibold text-blue-300"&gt;Saudação + LGPD&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-slate-400 text-xs mt-1"&gt;"Olá! Bem-vindo à Dunice &amp; Marcon..."&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-0.5 h-6 bg-purple-400"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-64 p-3 rounded-lg bg-purple-500/20 border border-purple-500/50 text-center text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="font-semibold text-purple-300"&gt;<span class="s1">🔌</span> Webhook&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-slate-400 text-xs"&gt;Busca dados por telefone&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-0.5 h-6 bg-amber-400"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-40 p-4 bg-amber-500/20 border-2 border-amber-500/50 rotate-45 flex items-center justify-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;span className="-rotate-45 text-sm font-medium text-amber-300 text-center"&gt;Encontrou?&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="flex gap-16 mt-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="flex flex-col items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;span className="text-emerald-400 text-xs mb-2"&gt;<span class="s2">✓</span> SIM&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="w-48 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div className="font-semibold text-blue-300"&gt;Valida CPF&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div className="text-slate-400 text-xs mt-1"&gt;3 primeiros dígitos&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="flex flex-col items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;span className="text-rose-400 text-xs mb-2"&gt;<span class="s2">✗</span> NÃO&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="w-48 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div className="font-semibold text-blue-300"&gt;Solicita CPF&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div className="text-slate-400 text-xs mt-1"&gt;CPF completo&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="mt-8 flex gap-16"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="flex flex-col items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="w-32 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/50 text-center text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="text-emerald-300"&gt;<span class="s2">✓</span> Válido&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="text-slate-400 text-xs mt-2"&gt;<span class="s3">→</span> Negociação&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="flex flex-col items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="w-32 py-2 rounded-lg bg-rose-500/20 border border-rose-500/50 text-center text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="text-rose-300"&gt;<span class="s2">✗</span> 2ª falha&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="text-slate-400 text-xs mt-2"&gt;<span class="s3">→</span> Transbordo&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>)}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>{(activeSection === 'all' || activeSection === 'offers') &amp;&amp; (</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h2 className="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center"&gt;2&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>Hierarquia de Ofertas</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="bg-slate-800 rounded-xl p-6 border border-slate-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="flex flex-col items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-80 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="font-semibold text-blue-300"&gt;<span class="s1">📋</span> Apresentação da Pendência&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-slate-400 text-xs mt-1"&gt;Contrato • Veículo • Valor • Dias Atraso&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-0.5 h-4 bg-blue-400"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-72 p-3 rounded-lg bg-amber-500/20 border border-amber-500/50 text-center text-sm mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="font-semibold text-amber-300"&gt;<span class="s1">❓</span> Sondagem Obrigatória&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-slate-400 text-xs mt-1"&gt;"O que dificultou o pagamento?"&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="w-full max-w-2xl space-y-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="p-4 rounded-lg bg-emerald-500/20 border border-emerald-500/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex justify-between items-center flex-wrap gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="text-emerald-400 font-bold"&gt;1º&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="font-semibold ml-2"&gt;Quitação à Vista&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;p className="text-slate-400 text-xs"&gt;Valor total com desconto&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="text-xs bg-emerald-500/30 text-emerald-300 px-2 py-1 rounded"&gt;<span class="s2">✓</span> Aceita <span class="s3">→</span> Formalização&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                            </span></p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-center text-slate-500 text-xs"&gt;<span class="s3">↓</span> Recusa&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                            </span></p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="p-4 rounded-lg bg-blue-500/20 border border-blue-500/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex justify-between items-center flex-wrap gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="text-blue-400 font-bold"&gt;2º&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="font-semibold ml-2"&gt;Atualização das Parcelas&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;p className="text-slate-400 text-xs"&gt;Parcelas em atraso atualizadas&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="text-xs bg-rose-500/30 text-rose-300 px-2 py-1 rounded"&gt;<span class="s2">✓</span> Aceita <span class="s3">→</span> Transbordo&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                            </span></p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-center text-slate-500 text-xs"&gt;<span class="s3">↓</span> Recusa&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                            </span></p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="p-4 rounded-lg bg-purple-500/20 border border-purple-500/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex justify-between items-center flex-wrap gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="text-purple-400 font-bold"&gt;3º&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="font-semibold ml-2"&gt;Renegociação&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;p className="text-slate-400 text-xs"&gt;Novo plano de pagamento&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="text-xs bg-rose-500/30 text-rose-300 px-2 py-1 rounded"&gt;<span class="s2">✓</span> Aceita <span class="s3">→</span> Transbordo&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                            </span></p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-center text-slate-500 text-xs"&gt;<span class="s3">↓</span> Recusa&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                                            </span></p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="p-4 rounded-lg bg-rose-500/20 border border-rose-500/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex justify-between items-center flex-wrap gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="text-rose-400 font-bold"&gt;4º&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;span className="font-semibold ml-2"&gt;Entrega Amigável&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                        </span>&lt;p className="text-slate-400 text-xs"&gt;Devolução do veículo&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="text-xs bg-rose-500/30 text-rose-300 px-2 py-1 rounded"&gt;<span class="s3">→</span> Transbordo&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="mt-6 w-full max-w-lg p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="text-center font-semibold text-emerald-400 mb-3"&gt;<span class="s1">✅</span> Formalização (Quitação)&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="space-y-2 text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex items-center gap-2 text-slate-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs"&gt;1&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>Confirma valor e vencimento</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex items-center gap-2 text-slate-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs"&gt;2&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>Atualização cadastral (email, tel)</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex items-center gap-2 text-slate-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-xs"&gt;3&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>Envia boleto PDF</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="flex items-center gap-2 text-amber-300 font-medium"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;span className="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center text-xs"&gt;4&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>Linha digitável ISOLADA</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>)}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>{(activeSection === 'all' || activeSection === 'objections') &amp;&amp; (</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h2 className="text-lg font-semibold text-rose-400 mb-4 flex items-center gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span className="w-8 h-8 rounded-full bg-rose-500/20 flex items-center justify-center"&gt;3&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>Tratamento de Objeções</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="bg-slate-800 rounded-xl p-6 border border-slate-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="grid md:grid-cols-3 gap-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="p-4 rounded-lg bg-rose-500/10 border border-rose-500/30"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="font-semibold text-rose-400 mb-3"&gt;<span class="s1">🚨</span> Transbordo Imediato&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;ul className="text-sm text-slate-300 space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Veículo apreendido&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Não conheço o carro&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Alega fraude&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Já vendeu veículo&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Impossibilidade total&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Situação desconhecida&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="p-4 rounded-lg bg-blue-500/10 border border-blue-500/30"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="font-semibold text-blue-400 mb-3"&gt;<span class="s1">🔄</span> Continua Negociação&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;ul className="text-sm text-slate-300 space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Desemprego <span class="s3">→</span> Atualização&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Problema saúde <span class="s3">→</span> Empatia&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Carro quebrado <span class="s3">→</span> Renegoc.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Valor alto <span class="s3">→</span> Desconto máx&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Boleto não chegou <span class="s3">→</span> Resolve&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Quer parcelar <span class="s3">→</span> Transbordo&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div className="p-4 rounded-lg bg-slate-700/50 border border-slate-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="font-semibold text-slate-300 mb-3"&gt;<span class="s1">🚪</span> Encerra&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;ul className="text-sm text-slate-400 space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Não sou eu&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;li&gt;• Não tenho interesse (após Checkmate)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;div className="mt-4 p-2 rounded bg-amber-500/10 border border-amber-500/30"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;div className="text-xs text-amber-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                                    </span>&lt;strong&gt;Checkmate:&lt;/strong&gt; Última tentativa</p>
-<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div className="mt-4 p-3 rounded-lg bg-rose-500/20 border border-rose-500/50 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span className="text-rose-300 font-semibold"&gt;<span class="s1">⚠️</span> REGRA: Objeção não listada <span class="s3">→</span> TRANSBORDO&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>)}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="bg-slate-800 rounded-xl p-4 border border-amber-500/30"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 className="font-semibold text-amber-400 mb-3"&gt;<span class="s1">⚡</span> Regras Críticas&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="flex items-center gap-2 p-2 rounded bg-slate-700/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;<span class="s1">🔒</span>&lt;/span&gt;&lt;span className="text-slate-300"&gt;Nunca encerrar sem transbordo&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="flex items-center gap-2 p-2 rounded bg-slate-700/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;<span class="s1">📊</span>&lt;/span&gt;&lt;span className="text-slate-300"&gt;Hierarquia obrigatória&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="flex items-center gap-2 p-2 rounded bg-slate-700/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;<span class="s1">1️⃣</span>&lt;/span&gt;&lt;span className="text-slate-300"&gt;Uma oferta por vez&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="flex items-center gap-2 p-2 rounded bg-slate-700/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;<span class="s1">2️⃣</span>&lt;/span&gt;&lt;span className="text-slate-300"&gt;Máximo 2 insistências&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="flex items-center gap-2 p-2 rounded bg-slate-700/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;<span class="s1">📝</span>&lt;/span&gt;&lt;span className="text-slate-300"&gt;Linha digitável isolada&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div className="flex items-center gap-2 p-2 rounded bg-slate-700/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;<span class="s1">❓</span>&lt;/span&gt;&lt;span className="text-slate-300"&gt;Sondagem antes de ofertar&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div className="mt-6 text-center text-slate-500 text-xs"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>Brain ID: 267a3992-1f1b-4ff9-932d-076c333b2d40 • Moveo.AI</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>ReactDOM.createRoot(document.getElementById('root')).render(&lt;FlowChart /&gt;);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-<p class="p2"><b></b><br></p>
-<p class="p2"><b></b><br></p>
-<p class="p2"><b></b><br></p>
-</body>
-</html>
+      <div id="root"></div>div>
+      <script type="text/babel">
+                const { useState } = React;
+
+                const FlowChart = () => {
+                              const [activeSection, setActiveSection] = useState('all');
+
+                              const sections = [
+                                { id: 'all', label: 'Visao Completa' },
+                                { id: 'auth', label: 'Autenticacao' },
+                                { id: 'offers', label: 'Hierarquia de Ofertas' },
+                                { id: 'objections', label: 'Objecoes' }
+                                            ];
+
+                              return (
+                                                <div className="min-h-screen bg-slate-900 p-4 text-white">
+                                                                      <div className="text-center mb-6">
+                                                                                                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                                                                                                                              Agente Fred - Fluxo de Atendimento
+                                                                                                  </h1>
+                                                                                                <p className="text-slate-400 text-sm mt-1">Dunice e Marcon - Banco Safra - Cobranca 90+</p>
+                                                                      </div>
+
+                                                                      <div className="flex justify-center gap-2 mb-6 flex-wrap">
+                                                                        {sections.map(s => (
+                                                                              <button
+                                                                                                                key={s.id}
+                                                                                                                onClick={() => setActiveSection(s.id)}
+                                                                                                                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                                                                                                                                                      activeSection === s.id
+                                                                                                                                                          ? 'bg-blue-500 text-white shadow-lg'
+                                                                                                                                                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                                                                                                                  }`}
+                                                                                                            >
+                                                                                {s.label}
+                                                                                </button>
+                                                                          ))}
+                                                                      </div>
+
+                                                                      <div className="flex justify-center gap-4 mb-6 text-xs flex-wrap">
+                                                                                                <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-blue-500"></span> Fluxo Normal</span>
+                                                                                                <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-emerald-500"></span> Sucesso</span>
+                                                                                                <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-amber-500"></span> Decisao</span>
+                                                                                                <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-rose-500"></span> Transbordo</span>
+                                                                                                <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-purple-500"></span> Webhook</span>
+                                                                      </div>
+
+                                                                      <div className="max-w-6xl mx-auto">
+
+                                                                        {(activeSection === 'all' || activeSection === 'auth') && (
+                                                                              <div className="mb-8">
+                                                                                                                <h2 className="text-lg font-semibold text-blue-400 mb-4 flex items-center gap-2">
+                                                                                                                                                      <span className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">1</span>
+                                                                                                                                                      Fase de Autenticacao
+                                                                                                                  </h2>
+                                                                                                                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                                                                                                                                                      <div className="flex flex-col items-center">
+                                                                                                                                                                                                <div className="w-48 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-center font-semibold shadow-lg">
+                                                                                                                                                                                                                                              Cliente Inicia Chat
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                <div className="w-0.5 h-6 bg-blue-400"></div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div className="w-72 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm">
+                                                                                                                                                                                                                                              <div className="font-semibold text-blue-300">Saudacao + LGPD</div>
+                                                                                                                                                                                                                                              <div className="text-slate-400 text-xs mt-1">Ola! Bem-vindo a Dunice e Marcon...</div>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                <div className="w-0.5 h-6 bg-purple-400"></div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div className="w-64 p-3 rounded-lg bg-purple-500/20 border border-purple-500/50 text-center text-sm">
+                                                                                                                                                                                                                                              <div className="font-semibold text-purple-300">Webhook</div>
+                                                                                                                                                                                                                                              <div className="text-slate-400 text-xs">Busca dados por telefone</div>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                <div className="w-0.5 h-6 bg-amber-400"></div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div className="w-40 p-4 bg-amber-500/20 border-2 border-amber-500/50 rotate-45 flex items-center justify-center">
+                                                                                                                                                                                                                                              <span className="-rotate-45 text-sm font-medium text-amber-300 text-center">Encontrou?</span>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div className="flex gap-16 mt-8">
+                                                                                                                                                                                                                                              <div className="flex flex-col items-center">
+                                                                                                                                                                                                                                                                                                <span className="text-emerald-400 text-xs mb-2">SIM</span>
+                                                                                                                                                                                                                                                                                                <div className="w-48 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                                                                                                                      <div className="font-semibold text-blue-300">Valida CPF</div>
+                                                                                                                                                                                                                                                                                                                                                      <div className="text-slate-400 text-xs mt-1">3 primeiros digitos</div>
+                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                              <div className="flex flex-col items-center">
+                                                                                                                                                                                                                                                                                                <span className="text-rose-400 text-xs mb-2">NAO</span>
+                                                                                                                                                                                                                                                                                                <div className="w-48 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                                                                                                                      <div className="font-semibold text-blue-300">Solicita CPF</div>
+                                                                                                                                                                                                                                                                                                                                                      <div className="text-slate-400 text-xs mt-1">CPF completo</div>
+                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                        
+                                                                                                                                                                                                <div className="mt-8 flex gap-16">
+                                                                                                                                                                                                                                              <div className="flex flex-col items-center">
+                                                                                                                                                                                                                                                                                                <div className="w-32 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                                                                                                                      <span className="text-emerald-300">Valido</span>
+                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                <div className="text-slate-400 text-xs mt-2">Negociacao</div>
+                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                              <div className="flex flex-col items-center">
+                                                                                                                                                                                                                                                                                                <div className="w-32 py-2 rounded-lg bg-rose-500/20 border border-rose-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                                                                                                                      <span className="text-rose-300">2a falha</span>
+                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                <div className="text-slate-400 text-xs mt-2">Transbordo</div>
+                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                        </div>
+                                                                                                                  </div>
+                                                                                </div>
+                                                                          )}
+
+                                                                        {(activeSection === 'all' || activeSection === 'offers') && (
+                                                                              <div className="mb-8">
+                                                                                                                <h2 className="text-lg font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                                                                                                                                                      <span className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">2</span>
+                                                                                                                                                      Hierarquia de Ofertas
+                                                                                                                  </h2>
+                                                                                                                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                                                                                                                                                      <div className="flex flex-col items-center">
+                                                                                                                                                                                                <div className="w-80 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm">
+                                                                                                                                                                                                                                              <div className="font-semibold text-blue-300">Apresentacao da Pendencia</div>
+                                                                                                                                                                                                                                              <div className="text-slate-400 text-xs mt-1">Contrato - Veiculo - Valor - Dias Atraso</div>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                <div className="w-0.5 h-4 bg-blue-400"></div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div className="w-72 p-3 rounded-lg bg-amber-500/20 border border-amber-500/50 text-center text-sm mb-4">
+                                                                                                                                                                                                                                              <div className="font-semibold text-amber-300">Sondagem Obrigatoria</div>
+                                                                                                                                                                                                                                              <div className="text-slate-400 text-xs mt-1">O que dificultou o pagamento?</div>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                        
+                                                                                                                                                                                                <div className="w-full max-w-2xl space-y-3">
+                                                                                                                                                                                                                                              <div className="p-4 rounded-lg bg-emerald-500/20 border border-emerald-500/50">
+                                                                                                                                                                                                                                                                                                <div className="flex justify-between items-center flex-wrap gap-2">
+                                                                                                                                                                                                                                                                                                                        <!DOCTYPE html>
+                                                                                                                                                                                                                                                                                                                          <html lang="pt-BR">
+                                                                                                                                                                                                                                                                                                                            <head>
+                                                                                                                                                                                                                                                                                                                                  <meta charset="UTF-8">
+                                                                                                                                                                                                                                                                                                                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                                                                                                                                                                                                                                                                                                              <title>Agente Fred - Fluxograma | Dunice & Marcon</title>
+                                                                                                                                                                                                                                                                                                                                              <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+  <body>
+        <div id="root"></div>div>
+        <script type="text/babel">
+                  const { useState } = React;
+
+                  const FlowChart = () => {
+                                const [activeSection, setActiveSection] = useState('all');
+
+                                const sections = [
+                                  { id: 'all', label: 'Visao Completa' },
+                                  { id: 'auth', label: 'Autenticacao' },
+                                  { id: 'offers', label: 'Hierarquia de Ofertas' },
+                                  { id: 'objections', label: 'Objecoes' }
+                                              ];
+
+                                return (
+                                                  <div className="min-h-screen bg-slate-900 p-4 text-white">
+                                                                        <div className="text-center mb-6">
+                                                                                                  <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                                                                                                                                Agente Fred - Fluxo de Atendimento
+                                                                                                    </h1>
+                                                                                                  <p className="text-slate-400 text-sm mt-1">Dunice e Marcon - Banco Safra - Cobranca 90+</p>
+                                                                        </div>
+
+                                                                        <div className="flex justify-center gap-2 mb-6 flex-wrap">
+                                                                          {sections.map(s => (
+                                                                                <button
+                                                                                                                  key={s.id}
+                                                                                                                  onClick={() => setActiveSection(s.id)}
+                                                                                                                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                                                                                                                                                        activeSection === s.id
+                                                                                                                                                            ? 'bg-blue-500 text-white shadow-lg'
+                                                                                                                                                            : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                                                                                                                    }`}
+                                                                                                              >
+                                                                                  {s.label}
+                                                                                  </button>
+                                                                            ))}
+                                                                        </div>
+
+                                                                        <div className="flex justify-center gap-4 mb-6 text-xs flex-wrap">
+                                                                                                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-blue-500"></span> Fluxo Normal</span>
+                                                                                                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-emerald-500"></span> Sucesso</span>
+                                                                                                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-amber-500"></span> Decisao</span>
+                                                                                                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-rose-500"></span> Transbordo</span>
+                                                                                                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-purple-500"></span> Webhook</span>
+                                                                        </div>
+
+                                                                        <div className="max-w-6xl mx-auto">
+
+                                                                          {(activeSection === 'all' || activeSection === 'auth') && (
+                                                                                <div className="mb-8">
+                                                                                                                  <h2 className="text-lg font-semibold text-blue-400 mb-4 flex items-center gap-2">
+                                                                                                                                                        <span className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">1</span>
+                                                                                                                                                        Fase de Autenticacao
+                                                                                                                    </h2>
+                                                                                                                  <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                                                                                                                                                        <div className="flex flex-col items-center">
+                                                                                                                                                                                                  <div className="w-48 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-center font-semibold shadow-lg">
+                                                                                                                                                                                                                                                Cliente Inicia Chat
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                  <div className="w-0.5 h-6 bg-blue-400"></div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                  <div className="w-72 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                <div className="font-semibold text-blue-300">Saudacao + LGPD</div>
+                                                                                                                                                                                                                                                <div className="text-slate-400 text-xs mt-1">Ola! Bem-vindo a Dunice e Marcon...</div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                  <div className="w-0.5 h-6 bg-purple-400"></div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                  <div className="w-64 p-3 rounded-lg bg-purple-500/20 border border-purple-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                <div className="font-semibold text-purple-300">Webhook</div>
+                                                                                                                                                                                                                                                <div className="text-slate-400 text-xs">Busca dados por telefone</div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                  <div className="w-0.5 h-6 bg-amber-400"></div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                  <div className="w-40 p-4 bg-amber-500/20 border-2 border-amber-500/50 rotate-45 flex items-center justify-center">
+                                                                                                                                                                                                                                                <span className="-rotate-45 text-sm font-medium text-amber-300 text-center">Encontrou?</span>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                  <div className="flex gap-16 mt-8">
+                                                                                                                                                                                                                                                <div className="flex flex-col items-center">
+                                                                                                                                                                                                                                                                                                  <span className="text-emerald-400 text-xs mb-2">SIM</span>
+                                                                                                                                                                                                                                                                                                  <div className="w-48 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                                                                                                                        <div className="font-semibold text-blue-300">Valida CPF</div>
+                                                                                                                                                                                                                                                                                                                                                        <div className="text-slate-400 text-xs mt-1">3 primeiros digitos</div>
+                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                <div className="flex flex-col items-center">
+                                                                                                                                                                                                                                                                                                  <span className="text-rose-400 text-xs mb-2">NAO</span>
+                                                                                                                                                                                                                                                                                                  <div className="w-48 p-3 rounded-lg bg-blue-500/20 border border-blue-500/50 text-center text-sm">
+                                                                                                                                                                                                                                                                                                                                                        <div className="font-semibold text-blue-300">Solicita CPF</div>
+                                                                                                                                                                                                                                                                                                                                                        <div className="text-slate-400 text-xs mt-1">CPF completo</div>
+                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                          
+                                                                                                                                                                                                  <div className="mt-8 flex gap-16">
+                                                                                                                                                                                                                                                <div className="flex flex-col items-center">
+                                                                                                                                                                                                                                                                                                  <div className="w-32 py-2 rounded-lg bg-emerald-500/20 border bor
+  </body>
+</body></title>
+  </head>
